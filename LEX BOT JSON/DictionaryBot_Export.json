@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "DictionaryBot",
+    "version": "1",
+    "intents": [
+      {
+        "rejectionStatement": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Okay then, How can I help you?"
+            }
+          ]
+        },
+        "name": "GetWordMeaning",
+        "version": "9",
+        "fulfillmentActivity": {
+          "type": "CodeHook",
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:830438771822:function:DictionaryBot",
+            "messageVersion": "1.0"
+          }
+        },
+        "sampleUtterances": [
+          "What does {word} means",
+          "Please tell meaning of {word}",
+          "meaning of {word}",
+          "what is meaning of {word}",
+          "Can you tell what does {word} means",
+          "what the fuck {word} means",
+          "what does this word means",
+          "can you tell me meaning of this word",
+          "what does this means",
+          "please tell meaning",
+          "tell meaning of {word}"
+        ],
+        "slots": [
+          {
+            "name": "word",
+            "slotConstraint": "Required",
+            "slotType": "AMAZON.Language",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Please tell you word!!"
+                },
+                {
+                  "contentType": "PlainText",
+                  "content": "You have to specify word for meaning."
+                },
+                {
+                  "contentType": "PlainText",
+                  "content": "Can you give me the word so i can tell you its meaning."
+                },
+                {
+                  "contentType": "PlainText",
+                  "content": "Please tell me word you want meaning for."
+                }
+              ],
+              "maxAttempts": 2,
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\"}"
+            },
+            "priority": 1,
+            "sampleUtterances": [
+              "my word is {word}",
+              "ok {word}",
+              "tell meaning of {word}"
+            ]
+          }
+        ],
+        "confirmationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Are you sure you want to search meaning of {word} ?"
+            }
+          ],
+          "maxAttempts": 3
+        }
+      }
+    ],
+    "voiceId": "Ivy",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 300,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    }
+  }
+}
