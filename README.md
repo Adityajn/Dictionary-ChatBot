@@ -27,4 +27,4 @@ This is a simple dictionary chatbot which tell meaning of any word.
 
 # Some Screenshots
 
-![]() ![]() ![]()
+![1.png](https://raw.githubusercontent.com/Adityajn/Dictionary-ChatBot/master/ScreenShots/1.png) ![2.png](https://raw.githubusercontent.com/Adityajn/Dictionary-ChatBot/master/ScreenShots/2.png) ![3.png](https://raw.githubusercontent.com/Adityajn/Dictionary-ChatBot/master/ScreenShots/3.png)
