@@ -5,15 +5,14 @@ This is a simple dictionary chatbot which tell meaning of any word.
 1. Amazon AWS Account
 2. Amazon Lex
 3. Amazon Lambda
-4. Account at Oxford Dictionary API
-
+4. Oxford Dictionary API account
 
 # Steps:
 1. Create zip of DictionaryBot_Export.json.
 2. Import above zip as New Bot into Amazon Lex.
 3. Create zip of contents of Lambda Function folder.
 4. Create a new function in Amazon Lambda with runtime as python 3.6 and choose lambda_basic_execution as existing role.
-5. Upload zip create in Step 2, use handler as "lambda_function.lambda_handler" and then save.
+5. Upload zip created in Step 3, use handler as "lambda_function.lambda_handler" and then save.
 6. Now test your bot through LEX console.
 7. Publish your LEX BOT and use Slack communication channel to integrate with slack.
 
@@ -23,7 +22,7 @@ This is a simple dictionary chatbot which tell meaning of any word.
 
 
 # SLACK INVITE LINK
-[Click this link to join slack workspace and start interacting with bot](https://join.slack.com/t/dictionarybot/shared_invite/enQtMzM0NjI3NzYxNTQyLWI0MmNmNzI0OTg4OTZhMjRmZTQwODE1ZjM0NzVjYmQwYTc1MDBlZjI3M2EzODE0NjJmYWRlNGMxMzIzY2FlNzY)
+[Click this link to join slack workspace and start interacting with Bot.](https://join.slack.com/t/dictionarybot/shared_invite/enQtMzM0NjI3NzYxNTQyLWI0MmNmNzI0OTg4OTZhMjRmZTQwODE1ZjM0NzVjYmQwYTc1MDBlZjI3M2EzODE0NjJmYWRlNGMxMzIzY2FlNzY)
 
 # Some Screenshots
 
